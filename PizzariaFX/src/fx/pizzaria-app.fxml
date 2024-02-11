@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.PizzariaApp">
+   <children>
+      <GridPane prefHeight="386.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="302.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="298.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="245.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnPizzaByName" mnemonicParsing="false" onAction="#btnPizzaByNameOnAction" prefHeight="30.0" prefWidth="218.0" text="Потърси пица по име" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets bottom="-90.0" left="20.0" top="13.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="-1.0" />
+               </padding>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="MAYA' S PIZZA">
+               <GridPane.margin>
+                  <Insets bottom="98.0" left="213.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnClientsByCity" mnemonicParsing="false" onAction="#btnClientsByCityOnAction" prefHeight="30.0" prefWidth="218.0" text="Потърси клиенти по град" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnOrdersByPhoneNum" mnemonicParsing="false" onAction="#btnOrdersByPhoneNumOnAction" prefHeight="28.0" prefWidth="219.0" text="Брой поръчки по телефонен номер" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnDrinkByName" mnemonicParsing="false" onAction="#btnDrinkByName" prefHeight="28.0" prefWidth="222.0" text="Потърси напитка" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnBestSellers" mnemonicParsing="false" onAction="#btnBestSellersOnAction" prefHeight="28.0" prefWidth="218.0" text="Виж пици бест-селъри" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <TextArea fx:id="txaResult" prefHeight="259.0" prefWidth="276.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="8">
+               <GridPane.margin>
+                  <Insets bottom="12.0" right="22.0" top="-43.0" />
+               </GridPane.margin>
+            </TextArea>
+            <TextField fx:id="txtInput" prefHeight="40.0" prefWidth="219.0">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="18.0" right="64.0" top="26.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fx:id="myImageView" fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="36.0" left="74.0" right="23.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@pizza2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnQuit" mnemonicParsing="false" onAction="#btnQuitOnAction" prefHeight="28.0" prefWidth="218.0" text="Край" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
